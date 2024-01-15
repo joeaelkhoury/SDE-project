@@ -64,7 +64,7 @@ python sde.py --cli
 
 - `requirements.txt`: Lists all the Python dependencies required for the project. This file is used by pip to automatically install all the necessary Python packages.
 
-- `screen1.mjs`: A Node.js module script that likely handles specific tasks like web scraping, automation, or other backend processes in a JavaScript/Node.js environment. It might be used in conjunction with the Python script for certain functionalities that are better handled in Node.js.
+- `screen1.mjs`: A Node.js module script that handles specific tasks like screenshot taking and browsing in a JavaScript/Node.js environment. It is used in conjunction with the Python script since its functions are better handled in Node.js.
 
 Each of these files plays a critical role in the setup, execution, and functionality of your application.
 
