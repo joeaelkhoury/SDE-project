@@ -21,14 +21,16 @@ This project involves Docker, Puppeteer, Playwright, Gradio, SQLite, and integra
 ## Installation
 
 ### Step 1: Clone the Repository
+```docker
 Clone this repository to your local machine:
 git clone [Repository URL]
-
+```
 ### Step 2: Building the Docker Container
 Navigate to the project directory and build the Docker container:
+```docker
 cd [Your Project Directory]
 docker build -t sde .
-
+```
 ### Step 3: Run the Container
 Run the Docker container:
 docker run -p 7860:7860 sde
