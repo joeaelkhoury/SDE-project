@@ -57,10 +57,17 @@ python sde.py --cli
 - Follow the prompts to interact with the application via the command line.
 
 ## Code Structure
-Briefly describe the key files and their purpose:
-- `Dockerfile`: Sets up the Docker environment.
-- `sde.py`: Main Python script for the application.
-- (Include descriptions of other major scripts, modules, or files in your project)
+
+- `Dockerfile`: This file is used to define the Docker container where the application will run. It specifies the base image, environment setup, dependencies to be installed, and the commands to run the application.
+
+- `sde.py`: The main Python script of the application. It contains the core logic for web scraping, data processing, interaction with OpenAI's API, and Gradio interface setup for visualization.
+
+- `requirements.txt`: Lists all the Python dependencies required for the project. This file is used by pip to automatically install all the necessary Python packages.
+
+- `screen1.mjs`: A Node.js module script that likely handles specific tasks like web scraping, automation, or other backend processes in a JavaScript/Node.js environment. It might be used in conjunction with the Python script for certain functionalities that are better handled in Node.js.
+
+Each of these files plays a critical role in the setup, execution, and functionality of your application.
+
 
 # Component Overview and Implementation
 
