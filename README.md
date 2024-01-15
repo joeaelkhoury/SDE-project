@@ -1,4 +1,3 @@
-```markdown
 # Project Title: Your Project Name
 
 ## Overview
