@@ -43,12 +43,17 @@ docker run -it -p 7860:7860 sde
 - The script will scrape data, interact with OpenAI's API, and use Gradio for visualization.
 
 ### Using Gradio Interface
-- Access the Gradio interface at `http://localhost:7860` (or the configured port).
+- Access the Gradio interface at
+```html
+  http://localhost:7860 (or the configured port).
+```
 - Select a department from the dropdown and click on the buttons to visualize department overviews or professor images.
 
 ### Command Line Interface (CLI) Mode
 - To run the application in CLI mode, use:
+```cmd
 python sde.py --cli
+```
 - Follow the prompts to interact with the application via the command line.
 
 ## Code Structure
