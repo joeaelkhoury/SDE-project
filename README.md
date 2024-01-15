@@ -23,12 +23,12 @@ This project involves Docker, Puppeteer, Playwright, Gradio, SQLite, and integra
 ### Step 1: Clone the Repository
 ```docker
 Clone this repository to your local machine:
-git clone [Repository URL]
+git clone https://github.com/joeaelkhoury/SDE-project
 ```
 ### Step 2: Building the Docker Container
 Navigate to the project directory and build the Docker container:
 ```docker
-cd [Your Project Directory]
+cd C:\Users\x\ [your project directory]
 docker build -t sde .
 ```
 ### Step 3: Run the Container
