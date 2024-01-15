@@ -33,7 +33,9 @@ docker build -t sde .
 ```
 ### Step 3: Run the Container
 Run the Docker container:
-docker run -p 7860:7860 sde
+```docker
+docker run -it -p 7860:7860 sde
+```
 ## Usage
 
 ### Running the Script
