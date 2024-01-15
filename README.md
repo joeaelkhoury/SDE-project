@@ -1,4 +1,4 @@
-# Project Title: Your Project Name
+# Project Title: SDE Project: Scraping and visualizing university research groups
 
 ## Overview
 This project involves Docker, Puppeteer, Playwright, Gradio, SQLite, and integration with OpenAI's GPT-4 and DALL-E models. It's designed to capture and process data from university websites, particularly focusing on research programs and faculty information, and then uses AI to summarize and visualize this data.
