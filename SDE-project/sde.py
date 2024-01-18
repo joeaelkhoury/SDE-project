@@ -99,7 +99,7 @@ class BusinessLogicLayer:
         # Create the department directory if it doesn't exist, or clean it if it does
         if os.path.exists(department_dir):
             for file in os.listdir(department_dir):
-                if file.endswith(('.png', '.jpg', '.jpeg')):  # Add other image extensions if needed
+                if file.endswith(('.png', '.jpg', '.jpeg')):
                     os.remove(os.path.join(department_dir, file))
         else:
             os.makedirs(department_dir, exist_ok=True)
@@ -203,9 +203,9 @@ class BusinessLogicLayer:
     def summarize_professor_info(professor_data):
         # Use standard GPT-4 model for summarization
         response = client.chat.completions.create(
-            model="gpt-4-vision-preview",  # Using text-based model for summarization
+            model="gpt-4-vision-preview",  
             messages=[{"role": "user", "content": professor_data}],
-            max_tokens=150  # Lower max tokens to prevent hitting limits
+            max_tokens=150  
         )
         return response.choices[0].message.content
     def generate_image(self, prompt):
@@ -221,7 +221,7 @@ class BusinessLogicLayer:
         department_dir = os.path.join('.', department_name.replace(" ", "_"))
         professor_images = []
         for file in os.listdir(department_dir):
-            if file.endswith('_image.png'):  # Assuming this is how professor images are named
+            if file.endswith('_image.png'):
                 professor_images.append(os.path.join(department_dir, file))
         return professor_images
 
@@ -319,7 +319,7 @@ class AdapterLayer:
             except Exception as e:
                 logging.error(f"Error in DALL-E API call: {e}")
                 if "rate_limit_exceeded" in str(e):
-                    time.sleep(delay * (2 ** attempt))  # Exponential backoff
+                    time.sleep(delay * (2 ** attempt))
                 else:
                     break
         return None
