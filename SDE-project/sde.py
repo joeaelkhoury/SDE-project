@@ -26,7 +26,7 @@ import time
 import asyncio
 
 
-api_key = "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"
+api_key = "YOUR_API_KEY"
 os.environ["OPENAI_API_KEY"] = api_key
 model = OpenAI()
 client = OpenAI()    
