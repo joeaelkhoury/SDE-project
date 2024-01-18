@@ -12,13 +12,9 @@ import IPython.display as display
 from PIL import Image
 from io import BytesIO
 import base64
-
 import requests
 from bs4 import BeautifulSoup
-import re
 from openai import OpenAI
-import os
-import json
 import nest_asyncio
 nest_asyncio.apply()
 import logging
