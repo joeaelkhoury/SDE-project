@@ -10,7 +10,7 @@ This project involves Docker, Puppeteer, Playwright, Gradio, SQLite, and integra
 - Data extraction and transformation.
 - Integration with OpenAI's GPT-4 and DALL-E for text summarization and image generation.
 - SQLite database for storing extracted data.
-- Gradio interface for easy visualization and interaction.
+- Gradio interface for easy visualization and interaction, which plays also the server side.
 - Auth0 integration for secure user authentication.
 
 
