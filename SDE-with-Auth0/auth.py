@@ -27,12 +27,12 @@ oauth = OAuth(app)
 
 auth0 = oauth.register(
     'auth0',
-    client_id='PxaSgxxgVo3Jbh3wICgXCZr67h2JZdeK',  # Replace with your Auth0 Client ID
-    client_secret='6GwQdYHETa1lU0F_tLBOOtjAAe4AU0F4fcr-4N0A3r47Navd16N67z6QhN-WJocq',  # Replace with your Auth0 Client Secret
-    api_base_url='https://dev-52g2mrlpglpuz2lf.eu.auth0.com',  # Replace with your Auth0 Domain
-    access_token_url='https://dev-52g2mrlpglpuz2lf.eu.auth0.com/oauth/token',
-    authorize_url='https://dev-52g2mrlpglpuz2lf.eu.auth0.com/authorize',
-    jwks_uri='https://dev-52g2mrlpglpuz2lf.eu.auth0.com/.well-known/jwks.json',
+    client_id='YOUR_CLIENT_ID',  # Replace with your Auth0 Client ID
+    client_secret='YOUR_CLIENT_SECRET',  # Replace with your Auth0 Client Secret
+    api_base_url='https://YOUR_DOMAIN.eu.auth0.com',  # Replace with your Auth0 Domain
+    access_token_url='https://YOUR_DOMAIN.eu.auth0.com/oauth/token',
+    authorize_url='https://YOUR_DOMAIN.eu.auth0.com/authorize',
+    jwks_uri='https://YOUR_DOMAIN.eu.auth0.com/.well-known/jwks.json',
     client_kwargs={
         'scope': 'openid profile email',
     },
