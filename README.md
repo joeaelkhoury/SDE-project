@@ -11,12 +11,15 @@ This project involves Docker, Puppeteer, Playwright, Gradio, SQLite, and integra
 - Integration with OpenAI's GPT-4 and DALL-E for text summarization and image generation.
 - SQLite database for storing extracted data.
 - Gradio interface for easy visualization and interaction.
+- Auth0 integration for secure user authentication.
+
 
 ## Prerequisites
 - Docker
 - Node.js (Installed in the Docker container)
 - Python 3.11.6 (Used in the Docker container)
 - An OpenAI API key (set in the Dockerfile and code)
+- Auth0 account for authentication setup
 
 ## Installation
 
@@ -32,9 +35,13 @@ cd C:\Users\x\ [your project directory]
 docker build -t sde .
 ```
 ### Step 3: Run the Container
-Run the Docker container:
+Run the Docker container for the file without Auth0:
 ```docker
 docker run -it -p 7860:7860 sde
+```
+while for the file with Auth0
+```docker
+docker run -it -p 5000:5000 -p 7860:7860 sde
 ```
 ## Usage
 
@@ -65,6 +72,7 @@ python sde.py --cli
 - `requirements.txt`: Lists all the Python dependencies required for the project. This file is used by pip to automatically install all the necessary Python packages.
 
 - `screen1.mjs`: A Node.js module script that handles specific tasks like screenshot taking and browsing in a JavaScript/Node.js environment. It is used in conjunction with the Python script since its functions are better handled in Node.js.
+- auth.py: Python script for handling Auth0 authentication.
 
 Each of these files plays a critical role in the setup, execution, and functionality of your application.
 
