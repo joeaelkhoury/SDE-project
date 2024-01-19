@@ -27,7 +27,7 @@ import asyncio
 
 
 # api_key = os.getenv('OPENAI_API_KEY')
-api_key = "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"
+api_key = "you-api-key"
 os.environ["OPENAI_API_KEY"] = api_key
 model = OpenAI()
 client = OpenAI()    
