@@ -1,0 +1,17 @@
+gradio
+requests
+beautifulsoup4
+openai
+nest_asyncio
+Pillow
+langchain
+langchain-community
+IPython
+playwright
+python-jose
+auth0-python
+flask
+authlib
+six
+gunicorn
+supervisor
