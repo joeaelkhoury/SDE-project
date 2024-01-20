@@ -57,7 +57,7 @@ docker run -it -p 5000:5000 -p 7860:7860 sde
 ### Using Gradio Interface
 - Access the Gradio interface at
 ```html
-  http://localhost:7860 
+  http://127.0.0.1:7860 
 ```
 - Select a department from the dropdown and click on the buttons to visualize department overviews or professor images.
 
