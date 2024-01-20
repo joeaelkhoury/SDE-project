@@ -49,10 +49,15 @@ docker run -it -p 5000:5000 -p 7860:7860 sde
 - Once the Docker container is up, the Python script `sde.py` will execute automatically.
 - The script will scrape data, interact with OpenAI's API, and use Gradio for visualization.
 
+### Accessing the Interface
+- Access to the interface at
+```html
+  http://127.0.0.1:5000/login
+```
 ### Using Gradio Interface
 - Access the Gradio interface at
 ```html
-  http://localhost:7860 (or the configured port).
+  http://localhost:7860 
 ```
 - Select a department from the dropdown and click on the buttons to visualize department overviews or professor images.
 
