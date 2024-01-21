@@ -3,6 +3,8 @@
 ## Overview
 This project involves Docker, Puppeteer, Playwright, Gradio, SQLite, and integration with OpenAI's GPT-4 and DALL-E models. It's designed to capture and process data from university websites, particularly focusing on research programs and faculty information, and then uses AI to summarize and visualize this data.
 
+[![Video Title](http://img.youtube.com/vi/k8igm3EYy3s/0.jpg)](http://www.youtube.com/watch?v=k8igm3EYy3s "demo")
+
 ## Features
 - Dockerized Python and Node.js environment.
 - Web scraping using Puppeteer.
