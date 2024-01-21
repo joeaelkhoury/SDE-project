@@ -77,7 +77,7 @@ python sde.py --cli
 - `requirements.txt`: Lists all the Python dependencies required for the project. This file is used by pip to automatically install all the necessary Python packages.
 
 - `screen1.mjs`: A Node.js module script that handles specific tasks like screenshot taking and browsing in a JavaScript/Node.js environment. It is used in conjunction with the Python script since its functions are better handled in Node.js.
-- auth.py: Python script for handling Auth0 authentication.
+- 'auth.py': Python script for handling Auth0 authentication.
 
 Each of these files plays a critical role in the setup, execution, and functionality of your application.
 
@@ -122,8 +122,6 @@ class AdapterLayer:
 
     def extract_additional_links(self, professor_url):
         # Extract additional links code here
-
-    # Other methods for API calls
 ```
 
 # ProcessCentricLayer: Orchestrates the flow between data, business logic, and adapter layers. Provides CLI and GUI interfaces.
