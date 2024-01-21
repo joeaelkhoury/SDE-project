@@ -5,6 +5,8 @@ This project involves Docker, Puppeteer, Playwright, Gradio, SQLite, and integra
 
 [![Video Title](http://img.youtube.com/vi/k8igm3EYy3s/0.jpg)](http://www.youtube.com/watch?v=k8igm3EYy3s "demo")
 
+![Alt text for the GIF]([URL_of_the_uploaded_GIF](https://github.com/joeaelkhoury/SDE-project/blob/main/assets/giphy.mp4))
+
 ## Features
 - Dockerized Python and Node.js environment.
 - Web scraping using Puppeteer.
