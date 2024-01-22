@@ -1,4 +1,3 @@
-# SDE Project: 
 # Scraping and visualizing university research groups
 
 ## Overview
