@@ -147,7 +147,8 @@ class BusinessLogicLayer:
         # Process each professor
         for professor_name in professor_names:
             professor_data = ""
-            unique_segments = set() 
+            # unique_segments = set()
+            professor_data_list = []
             i = 0
 
             while True:
@@ -163,7 +164,8 @@ class BusinessLogicLayer:
                 else:
                     logging.error(f"Failed to process vision data for professor: {professor_name}")
                     break
-                unique_segments.add(professor_data)
+                # unique_segments.add(professor_data)
+                professor_data_list.append(professor_data)
                 i += 1
 
             # Summarize the combined information using GPT-4 text model
@@ -180,13 +182,47 @@ class BusinessLogicLayer:
                 else:
                     logging.error(f"Failed to generate image for professor: {professor_name}")
 
+        # Write professor summaries to JSON file
+        json_file_path = os.path.join(department_dir, 'professor_summaries.json')
+        with open(json_file_path, 'w') as json_file:
+            json.dump(professor_summaries, json_file, indent=4)
 
-        # Generate an overview for the department
-        department_summary = "\n\n".join(professor_summaries.values())
-        department_overview = self.adapter_layer.openai_text_api_call(department_summary)
+        # Read the JSON data and write it to a text file
+        text_file_path = os.path.join(department_dir, 'professor_summaries.txt')
+        with open(json_file_path, 'r') as json_file, open(text_file_path, 'w') as text_file:
+            professor_data = json.load(json_file)
+            for professor in professor_data:
+                text_file.write(f"{professor}:\n{professor_data[professor]}\n\n")
+
+
+        # Read from the text file for summarization
+        with open(text_file_path, 'r') as text_file:
+            all_professors_data = text_file.read()
+
+        # Create a summary prompt for the department
+        summary_prompt = f"Provide a comprehensive summary of the {department_name} department based on the following information: {all_professors_data}"
+
+        # Aggregate the data for summarization
+        # aggregated_data = "\n\n".join([professor_data[professor] for professor in professor_data])
+
+        # Create a summary prompt for the department
+        # summary_prompt = f"Provide a comprehensive summary of the {department_name} department based on the following information: {aggregated_data}"
+
+        # Generate department overview summary
+        department_overview = self.adapter_layer.openai_text_api_call(summary_prompt)
+
+        # Write the department overview to a file
         overview_file_path = os.path.join(department_dir, 'department_overview.txt')
         with open(overview_file_path, 'w') as overview_file:
             overview_file.write(department_overview)
+            
+
+        # Generate an overview for the department
+        # department_summary = "\n\n".join(professor_summaries.values())
+        # department_overview = self.adapter_layer.openai_text_api_call(department_summary)
+        # overview_file_path = os.path.join(department_dir, 'department_overview.txt')
+        # with open(overview_file_path, 'w') as overview_file:
+        #     overview_file.write(department_overview)
 
         overview_prompt = f"Visualization of the {department_name} department."
         department_overview_image = self.adapter_layer.generate_image(overview_prompt)
